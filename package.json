@@ -1,9 +1,13 @@
 {
   "name": "react-router-lockin",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "React Router addon for locking user in current page.",
   "main": "lib/index.js",
   "author": "Adam Makświej <adam.makswiej@gmail.com>",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/vertexbz/react-router-lockin.git"
+  },
   "license": "MIT",
   "dependencies": {
     "invariant": "^2.2.2",
