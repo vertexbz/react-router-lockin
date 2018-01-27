@@ -40,10 +40,16 @@ class LockWithState extends React.Component {
                 </tbody>
             </table>
 
-            <Lockin lock={this.state.lock} message={this.state.message} renderChildren={this.state.render}>
-                <div style={{ padding: 5, backgroundColor: 'yellow', fontWeight: 'bold' }}>
-                    Lockin&apos;s CHILD
-                </div>
+            <Lockin lock={this.state.lock} message={this.state.message}>
+                {[0, 1, 2, 4, 5].map((n) => (
+                    <div key={n} style={{ padding: 5, backgroundColor: 'orange', height: 32, fontWeight: 'bold', margin: 5 }}>
+                        <Lockin renderChildren={this.state.render}>
+                            <div style={{ padding: 5, backgroundColor: 'yellow', height: 22, fontWeight: 'bold' }}>
+                                #{n+1} Child Lockin&apos;s content
+                            </div>
+                        </Lockin>
+                    </div>
+                ))}
             </Lockin>
 
             <Link to={`/${Number(Math.random().toString().replace('0.',  '')).toString(16)}`}>Go to another address</Link>

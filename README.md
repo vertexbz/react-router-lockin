@@ -1,6 +1,7 @@
 # react-router-lockin
 
 React Router addon for locking user in current page.
+It also lets you display content depends whether user is locked on page or not. See last example.
 
 ## Props
 
@@ -13,8 +14,54 @@ React Router addon for locking user in current page.
 
 ## Example
 
-```jsx
-<Lockin lock />
+```js
+import * as React from 'react';
+import Lockin from 'react-router-lockin';
+
+
+const Page = () => (
+    <div>
+        <Lockin lock />
+    </div>
+);
+
+
+const Page = () => (
+    <div>
+        <Lockin lock={false} message="Want to leave?" />
+    </div>
+);
+
+const Page = () => (
+    <div>
+        <Lockin lock={true} message="Want to leave?" renderChildren="locked">
+            This is rendered when lock is true
+        </Lockin>
+    </div>
+);
+
+const Page = () => (
+    <div>
+        <Lockin lock={true} message="Want to leave?" renderChildren="free">
+            This is rendered when lock is false
+        </Lockin>
+    </div>
+);
+
+
+const Page = () => (
+    <div>
+        <Lockin lock={true} message="Want to leave?">
+            <Lockin renderChildren="free">
+                This is rendered when lock is false
+            </Lockin>
+            <Lockin renderChildren="locked">
+                This is rendered when lock is true
+            </Lockin>
+        </Lockin>
+    </div>
+);
+
 ```
 
 ---

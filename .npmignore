@@ -98,3 +98,5 @@ src/
 .gitignore
 .flowconfig
 yarn.lock
+/config/test.js
+/coverage/

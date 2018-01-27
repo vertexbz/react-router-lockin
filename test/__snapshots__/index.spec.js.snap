@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React Router Lockin nested throws when nested lock is true after change 1`] = `"You cannot use lock user from Lockin mounted within another's context"`;
+
+exports[`React Router Lockin nested throws when nested lock is true since init 1`] = `"Cannot set lock to true when in Lockin context"`;
+
+exports[`React Router Lockin throws when not in router context 1`] = `"You should not use <Lockin> outside a <Router>"`;

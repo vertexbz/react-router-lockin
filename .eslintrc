@@ -59,7 +59,7 @@
     ],
     "complexity": [
       "warn",
-      5
+      8
     ],
     "object-curly-spacing": [
       "warn",

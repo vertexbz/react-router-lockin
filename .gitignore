@@ -97,4 +97,4 @@ yarn.lock
 package-lock.json
 
 lib/
-
+/coverage/
